@@ -1,10 +1,15 @@
 package Alex.Gochenour.GameOfLifeAPI;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class PetriDish {
 
+	@Id
+	@GeneratedValue
+	private Long id;
 	String name;
 	char[][] inputArray;
 
@@ -26,5 +31,10 @@ public class PetriDish {
 	public char[][] getInputArray() {
 		return inputArray;
 	}
+
+	public Long getId() {
+		return id;
+	}
+	
 	
 }

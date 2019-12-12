@@ -28,4 +28,8 @@ public class PetriDishStorage {
 		return (List<PetriDish>) petriDishRepo.findAll();
 	}
 	
+	public void removeDish(PetriDish petriDish) {
+		petriDishRepo.delete(petriDish);
+	}
+	
 }
