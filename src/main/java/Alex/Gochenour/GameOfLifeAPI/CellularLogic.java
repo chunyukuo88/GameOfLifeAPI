@@ -1,7 +1,13 @@
 package Alex.Gochenour.GameOfLifeAPI;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class CellularLogic {
 
+	@Autowired
+	static PetriDishStorage petriDishStorage;
+	
+	//This method evaluates rows and sees if a given cell dies of loneliness.
 	public char[] lonelinessDeathHorizontal(char[] inputArray) {
 		char[] outputArray = new char[inputArray.length];
 		for (int i = 1; i < inputArray.length - 1; i++) {
@@ -17,6 +23,7 @@ public class CellularLogic {
 		return outputArray;
 	}
 
+//	This method evaluates cells both horizontally and vertically and sees if a given cell dies of loneliness.
 	public char[][] lonelinessDeathHorizontal2D(char[][] inputArray) {
 
 		char[][] outputArray = new char[2][6];
@@ -60,6 +67,7 @@ public class CellularLogic {
 		return outputArray;
 	}
 
+//	This evaluates if a cell dies of overcrowding
 	public char[][] deathByFourNeighbors(char[][] inputArray) {
 
 		char[][] outputArray = inputArray;
@@ -102,6 +110,7 @@ public class CellularLogic {
 		return outputArray;
 	}
 
+//	This accounts for both death and birth of cells
 	public char[][] deathAndBirth(char[][] inputArray) {
 		char[][] outputArray = new char[inputArray.length][inputArray[0].length];
 		
@@ -174,6 +183,7 @@ public class CellularLogic {
 		return outputArray;
 	}
 
+//	I have extracted the logic that determines a cell's fate from the method that follows this one.
 	public static char determineCellFate(int neighbors, char inputChar) {
 		if (neighbors > 3) {
 			return '.';
@@ -186,12 +196,9 @@ public class CellularLogic {
 		} else
 			return '.';
 	}
-
 	
-	
-	
-	
-	public char[][] edgesAndInterior(char[][] inputArray) {
+//	This is the final iteration of the core logic of this program:
+	public static char[][] edgesAndInterior(char[][] inputArray) {
 		char[][] outputArray = new char[inputArray.length][inputArray[0].length];
 		for (int i = 0; i < inputArray.length; i++) {
 			for (int j = 0; j < inputArray[0].length; j++) {
@@ -299,4 +306,5 @@ public class CellularLogic {
 		}
 		return outputArray;
 		}
+
 }

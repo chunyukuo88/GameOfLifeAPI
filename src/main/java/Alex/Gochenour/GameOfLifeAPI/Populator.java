@@ -45,9 +45,7 @@ public class Populator implements CommandLineRunner {
 				{'.', '.', '.', '.', '.', '.', '.', '.'},
 				{'.', '.', '.', '.', '.', '.', '.', '.'},
 				{'.', '.', '.', '.', '.', '.', '.', '.'}};
-		PetriDish glider = new PetriDish("Propellors", gliderArray); 
+		PetriDish glider = new PetriDish("Glider", gliderArray); 
 		petriDishStorage.addDish(glider);
 	}
-	
-	
 }

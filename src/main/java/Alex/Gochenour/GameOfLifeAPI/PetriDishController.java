@@ -1,6 +1,7 @@
 package Alex.Gochenour.GameOfLifeAPI;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -27,6 +28,12 @@ public class PetriDishController {
 	@GetMapping("/{name}")
 	public PetriDish getPetriDishByName(@PathVariable String name) {
 		PetriDish petriDish = petriDishStorage.findDishByName(name);
+		return petriDish;
+	}
+	
+	@GetMapping("/dishID/{id}")
+	public Optional<PetriDish> getPetriDishById(@PathVariable Long id) {
+		Optional<PetriDish> petriDish = petriDishStorage.findDishById(id);
 		return petriDish;
 	}
 	
