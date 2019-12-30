@@ -1,10 +1,13 @@
 package Alex.Gochenour.GameOfLifeAPI;
 
+import javax.persistence.Entity;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
+//@Entity
 public class CellularLogic {
 
-	@Autowired
+//	@Autowired
 	static PetriDishStorage petriDishStorage;
 	
 	//This method evaluates rows and sees if a given cell dies of loneliness.
