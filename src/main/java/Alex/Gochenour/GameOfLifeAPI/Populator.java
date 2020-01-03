@@ -26,6 +26,8 @@ public class Populator implements CommandLineRunner {
 				{'.', '.', '.', '.', '.', '.', '.', '.'},				
 				{'.', '.', '.', '.', '.', '.', '.', '.'},
 				{'.', '.', '.', '.', '.', '.', '.', '.'},
+				{'.', '.', '.', '.', '.', '.', '.', '.'},
+				{'.', '.', '.', '.', '.', '.', '.', '.'},
 				{'.', '.', '.', '.', '.', '.', '.', '.'}};
 		PetriDish blankDish = new PetriDish("Blank Dish", blankDishArray); 
 		petriDishStorage.addDish(blankDish);
@@ -37,6 +39,8 @@ public class Populator implements CommandLineRunner {
 				{'.', '@', '.', '.', '.', '.', '.', '.'},
 				{'.', '@', '.', '.', '.', '.', '.', '.'},
 				{'.', '@', '.', '.', '.', '@', '@', '@'},
+				{'.', '.', '.', '.', '.', '.', '.', '.'},
+				{'.', '.', '.', '.', '.', '.', '.', '.'},
 				{'.', '.', '.', '.', '.', '.', '.', '.'},
 				{'.', '.', '.', '.', '.', '.', '.', '.'}};
 		PetriDish propellors = new PetriDish("Propellors", propellorsArray); 
