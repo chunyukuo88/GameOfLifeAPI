@@ -3,6 +3,7 @@ package Alex.Gochenour.GameOfLifeAPI;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 
 @Entity
 public class PetriDish {
@@ -11,6 +12,7 @@ public class PetriDish {
 	@GeneratedValue
 	private Long id;
 	String name;
+	@Lob
 	char[][] inputArray;
 
 	
